@@ -14,4 +14,24 @@ router.get("/phones", (req, res, next) => {
     .catch((err) => res.json(err));
 });
 
+// //  GET /api/phones/:phoneId -  Retrieves a specific phone by id
+
+// router.get("/phones/:phoneId", (req, res, next) => {
+//   const { phoneId } = req.params;
+
+//   if (!mongoose.Types.ObjectId.isValid(phoneId)) {
+//     res.status(400).json({ message: "Specified id is not valid" });
+
+//     return;
+//   }
+
+//   Project.findById(phoneId)
+
+//     .populate("tasks")
+
+//     .then((phone) => res.status(200).json(phone))
+
+//     .catch((error) => res.json(error));
+// });
+
 module.exports = router;
